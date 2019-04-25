@@ -3,7 +3,7 @@ module.exports = {
      * @param {number[]} list
      */
     incrementValues: function(list) {
-        const mapIncrement = val => Number(val) + 1;
+        const mapIncrement = val => Number(val) + 3;
         return list.map(mapIncrement);
     },
     /**
