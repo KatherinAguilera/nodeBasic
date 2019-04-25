@@ -1,15 +1,8 @@
-const cp = require("child_process");
-// Mostar lista de carpeta y archivos
-function execComand(command){
-  cp.exec(command, (err, stdout, stderr) => {
-      if (err) {
-        console.log(`Error: ${err}`); return;
-      }
-      if (stdout) console.log(`Standard out: \n${stdout}`);
-      if (stderr) console.log(`Standard out: \n${stdout}`);
-    })
-}
+const {
+    from0to,
+    asyncFrom0to
+} = require("./src/counter");
 
-// execComand("ls");
-// funcion en script de multiplicar
-execComand("node ./src/script --base=6");
+// Llamadas a funciones
+asyncFrom0to(10,3);
+from0to(10, 2);
